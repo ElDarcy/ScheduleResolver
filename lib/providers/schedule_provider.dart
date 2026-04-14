@@ -11,7 +11,7 @@ final Uuid _uuid = const Uuid();
 
 List<TaskModel>get tasks => _tasks;
 
-void addTasks({
+void addTask({
   required String title,
   required String category,
   required DateTime date,
@@ -39,7 +39,7 @@ void addTasks({
 }
 
 
-  void removeTasks(String id) {
+  void removeTask(String id) {
   _tasks.removeWhere((task) => task.id == id);
   notifyListeners();
   }
